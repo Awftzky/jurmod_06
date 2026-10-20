@@ -10,7 +10,7 @@ function KartuMenu ({namaMakanan , harga , kategori="Makanan"}) {
             <p>{kategori}</p>
             <LabelHarga nilai = {harga}/>
             <div>
-                <button onClick={()=> setJumlah(jumlah = 1)}>Tambah</button>
+                <button onClick={()=> setJumlah(jumlah + 1)}>Tambah</button>
                 <p>{jumlah}</p>
                 <button onClick={()=> setJumlah(jumlah - 1)}>Kurang</button>
             </div>

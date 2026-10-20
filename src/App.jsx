@@ -1,17 +1,18 @@
 import { useState } from 'react'
+
+import Panel from './components/Panel';
 import './App.css'
+import KartuMenu from './components/KartuMenu';
 
 function App() {
-  const name = "Aufa";
-  let time = 9;
-  let n =0;
-
+  let N = 95;
   return(
     <>
-      <h1 style={{color: "blue"}}>Kantin - {name}</h1>
-      <p>{time < 12 ? "Selamat Pagi" : "Selamat Siang"}</p>
-      <p>saldo Awal Kartu kantin: {n * 1000}</p>
-      <button type='submit'>Bayar</button>
+    <Panel judul="Menu Hari Ini">
+      <KartuMenu namaMakanan="Nasi Ayam Geprek" harga={10000 + (N * 100)}/>
+      <KartuMenu namaMakanan="Es Teh Lemon" kategori="Minuman" harga="Rp 6.000"/>
+      <KartuMenu namaMakanan="Mie Goreng Telur" harga="Rp 12.000"/>
+    </Panel>
     </>
   );
 }
